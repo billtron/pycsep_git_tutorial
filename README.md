@@ -40,6 +40,7 @@ From the `git` documentation page, "`git merge` joins two or more development hi
 2. Fetch branches from *upstream*  
 ```
 $ git fetch upstream
+$ git merge upstream/main
 > remote: Counting objects: 75, done.
 > remote: Compressing objects: 100% (53/53), done.
 > remote: Total 62 (delta 27), reused 44 (delta 9)
