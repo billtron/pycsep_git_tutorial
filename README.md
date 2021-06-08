@@ -34,7 +34,7 @@ If `git` spots that competing changes are made to the same line of a file you wi
 
 ### Using `git merge`
 
-From the `git` documentation page, "`git merge` joins two or more development histories together. 
+From the `git` documentation page: "`git merge` joins two or more development histories together". 
 
 1. Navigate to local repository using command line
 2. Fetch branches from *upstream*  
@@ -69,7 +69,7 @@ $ git merge upstream/main
 
 `git rebase` can be a powerful tool for maintaining clean commit histories in open-source projects. It must be used with caution, because it re-writes the commit history of the repository. This has major advantages in shared development such as consolidating commits from a pull request with several commits or rewiting commit messages to better describe the suggested code changes. `git rebase` can also be very useful for updating an open pull request with new changes from the *upstream* default branch. This can occur if new changes are merge into *upstream* while a pull request is still open. 
 
-The golden rule of rebasing **never rebase a shared (or public) branch**. You will be using `git rebase` on branches associated with your pull requests.
+The golden rule of rebasing is to **never rebase a shared (or public) branch**. You will be using `git rebase` on branches associated with your pull requests.
 
 Make sure to read the references about rebasing before using this tool. 
 
@@ -89,13 +89,13 @@ $ git fetch upstream
 $ git checkout main
 > Switched to branch 'main'
 ```
-4. Rebase local changes on top *upstream* master
+4. Rebase local changes on top *upstream* `main`
 ```
-$ git rebase upstream/master
+$ git rebase upstream/main
 > First, rewinding head to replay your work on top of it...
 > Fast-forwarded main to upstream/main.
 ```
-5. Verify that local `main` was updated with changes from ``upstream/master`.
+5. Verify that local `main` was updated with changes from ``upstream/main`.
 ```
 $ git status
 > 
@@ -154,7 +154,7 @@ $ git push -u origin my_new_branch
 
 ### Code review and merging pull request
 
-Completing a code review is the last step before the pull request will be merged into master. Each project will have its own code review standards. Pull requests can be opened at any point during development (even with an empty commit). Notes should be addeded to the pull request page that indicate this pull request is *in-development* and not ready for a code review.
+Completing a code review is the last step before the pull request will be merged into `main`. Each project will have its own code review standards. Pull requests can be opened at any point during development (even with an empty commit). Notes should be addeded to the pull request page that indicate this pull request is *in-development* and not ready for a code review.
 
 ![image](https://user-images.githubusercontent.com/1085365/121117266-b80c4600-c7cc-11eb-9307-40bde3ecc564.png)
 
@@ -169,9 +169,9 @@ You are now a contributor to an open-source project! The last step to finish the
 
 1. Synchronize forked repository
 ```
-$ git checkout master
-$ git pull --rebase upstream master
-$ git push -f origin master
+$ git checkout main
+$ git pull --rebase upstream main
+$ git push -f origin main
 ```
 2. Delete the local copy of the branch
 ```
