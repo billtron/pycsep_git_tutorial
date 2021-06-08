@@ -116,6 +116,9 @@ Now that our forked repository is configured to track *upstream* and we have syn
 1. Create a new branch for your feature / bug fix / **docs** contributions.
 ```
 $ git branch my_new_branch
+
+Now switch to new branch
+$ git checkout my_new_branch
 > Switched to a new branch 'my_new_branch'
 ```
 
